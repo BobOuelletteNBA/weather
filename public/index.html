@@ -17,17 +17,42 @@
             <div class="search-box">
                 <div class="search-row-1">
                     <input type="text" id="cityInput" placeholder="Enter city name..." />
-                    <input type="text" id="stateInput" placeholder="State/Province (optional)" />
+                    <select id="stateInput" disabled>
+                        <option value="">State/Province (optional)</option>
+                    </select>
                 </div>
                 <div class="search-row-2">
-                    <input type="text" id="countryInput" placeholder="Country (optional)" />
+                    <select id="countryInput">
+                        <option value="">Country (optional)</option>
+                        <option value="Canada">Canada</option>
+                        <option value="United States">United States</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="France">France</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Austria">Austria</option>
+                        <option value="India">India</option>
+                        <option value="China">China</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="Other">Other (type manually)</option>
+                    </select>
+                    <input type="text" id="countryManualInput" placeholder="Enter country name..." style="display: none;" />
                 </div>
                 <div class="search-row-3">
                     <button id="searchBtn">Get Weather</button>
                 </div>
             </div>
             <div class="search-examples">
-                <p>Examples: "London" • "London, Ontario, Canada" • "Paris, Texas, USA"</p>
+                <p>Examples: "London" • Select "Canada" → "Ontario" • Select "United States" → "Texas"</p>
             </div>
         </div>
         

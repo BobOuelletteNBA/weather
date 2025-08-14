@@ -66,17 +66,29 @@ header p {
     justify-items: center;
 }
 
-#cityInput, #stateInput, #countryInput {
+#cityInput, #stateInput, #countryInput, #countryManualInput {
     padding: 15px;
     border: 2px solid #ddd;
     border-radius: 10px;
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s;
+    background: white;
+    width: 100%;
 }
 
-#cityInput:focus, #stateInput:focus, #countryInput:focus {
+#cityInput:focus, #stateInput:focus, #countryInput:focus, #countryManualInput:focus {
     border-color: #74b9ff;
+}
+
+#stateInput:disabled {
+    background: #f8f9fa;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+select {
+    cursor: pointer;
 }
 
 .search-examples {
@@ -222,7 +234,7 @@ header p {
         margin: 5px;
     }
     
-    #cityInput, #stateInput, #countryInput {
+    #cityInput, #stateInput, #countryInput, #countryManualInput {
         padding: 12px;
         font-size: 0.9rem;
     }
@@ -230,5 +242,9 @@ header p {
     #searchBtn {
         padding: 12px 20px;
         font-size: 0.9rem;
+    }
+    
+    .search-examples p {
+        font-size: 0.8rem;
     }
 }
