@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Weather App</h1>
+            <p>Get current weather for any city</p>
+        </header>
+        
+        <div class="search-section">
+            <div class="search-box">
+                <div class="search-row-1">
+                    <input type="text" id="cityInput" placeholder="Enter city name..." />
+                    <input type="text" id="stateInput" placeholder="State/Province (optional)" />
+                </div>
+                <div class="search-row-2">
+                    <input type="text" id="countryInput" placeholder="Country (optional)" />
+                </div>
+                <div class="search-row-3">
+                    <button id="searchBtn">Get Weather</button>
+                </div>
+            </div>
+            <div class="search-examples">
+                <p>Examples: "London" • "London, Ontario, Canada" • "Paris, Texas, USA"</p>
+            </div>
+        </div>
+        
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+        
+        <div id="weatherCard" class="weather-card hidden">
+            <div class="weather-header">
+                <h2 id="cityName"></h2>
+                <img id="weatherIcon" src="" alt="Weather icon" />
+            </div>
+            
+            <div class="temperature">
+                <span id="temp"></span>°C
+            </div>
+            
+            <div class="description">
+                <p id="weatherDesc"></p>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="label">Humidity:</span>
+                    <span id="humidity"></span>%
+                </div>
+                <div class="detail-item">
+                    <span class="label">Wind Speed:</span>
+                    <span id="windSpeed"></span> m/s
+                </div>
+            </div>
+        </div>
+        
+        <div id="errorMessage" class="error-message hidden">
+            <p></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
